@@ -73,6 +73,8 @@ jobs:
           ls
           cd deployment-1
           ls
+          touch aa.txt | exit 0
+          echo "aa" >> aa.txt
           export COMMIT_MESSAGE="Generated template from ${{ github.repository }}/${{ github.ref}}@${{ github.sha }}"
           echo $COMMIT_MESSAGE
           git add .
