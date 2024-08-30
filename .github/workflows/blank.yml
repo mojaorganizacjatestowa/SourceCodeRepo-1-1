@@ -59,7 +59,7 @@ jobs:
          # Runs a single command using the runners shell
       - uses: actions/checkout@v4
         with:
-          repository: 'mojaorganizacjatestowa/SourceCodeRepo-1'
+          repository: 'mojaorganizacjatestowa/GitOpsRepo-1'
           ref: 'main'
           token:  ${{ github.token }}
 
