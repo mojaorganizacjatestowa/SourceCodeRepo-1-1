@@ -66,7 +66,7 @@ jobs:
         with:
           repository: 'mojaorganizacjatestowa/GitOpsRepo-1'
           ref: 'main'
-          token:  ${{ github.token }}
+          token:  ${{ secrets.TOKEN }}
 
       - name: Setup git config
         run: |
