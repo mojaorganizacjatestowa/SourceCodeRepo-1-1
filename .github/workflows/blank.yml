@@ -80,8 +80,8 @@ jobs:
           ls
           touch aa.txt | exit 0
           echo "aa" >> aa.txt
-          export COMMIT_MESSAGE="DT:${{ github.repository }}/{{ github.ref}}@${{ github.sha }}"
+          export COMMIT_MESSAGE="DT:${{ github.sha }}:DT"
           echo $COMMIT_MESSAGE
           git add .
-          git commit -m "$COMMIT_MESSAGE"
+          git commit -m "Standard message $COMMIT_MESSAGE"
           git push
