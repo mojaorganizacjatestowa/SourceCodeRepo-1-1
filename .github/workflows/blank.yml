@@ -85,3 +85,13 @@ jobs:
           git add .
           git commit -m "Standard message $COMMIT_MESSAGE"
           git push
+          echo "DEPLOY_COMMIT=$(git rev-parse HEAD)" >> $GITHUB_ENV
+          
+          
+      - name: SetCommitStatus
+        uses: myrotvorets/set-commit-status-action@master
+        with:
+           token: ${{ secrets.TOKEN }}
+           status: success
+           context: Send to deploy
+           description: env.DEPLOY_COMMIT
