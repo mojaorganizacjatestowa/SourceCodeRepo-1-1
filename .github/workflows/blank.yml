@@ -82,8 +82,7 @@ jobs:
           echo "aa" >> aa.txt
           export COMMIT_MESSAGE="DT:${{ github.sha }}:DT"
           echo $COMMIT_MESSAGE
-          git add .
-          git commit -m "Standard message "
+    
          
         
       - uses: peter-evans/create-pull-request@v6
