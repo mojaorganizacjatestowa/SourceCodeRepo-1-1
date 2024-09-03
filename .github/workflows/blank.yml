@@ -54,6 +54,14 @@ jobs:
         run: echo Hello, world!
       - name: Push Image
         run: echo Hello, world!
+
+      - name: SetCommitStatus
+        uses: myrotvorets/set-commit-status-action@master
+        with:
+           token: ${{ secrets.TOKEN }}
+           status: success
+           context: Build image
+           description: artifactory/main/svc:67.8.1
       
 
   deploy:
@@ -67,6 +75,8 @@ jobs:
           repository: 'mojaorganizacjatestowa/GitOpsRepo-1'
           ref: 'main'
           token:  ${{ secrets.TOKEN }}
+
+        
 
       - name: Setup git config
         run: |
