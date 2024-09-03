@@ -89,8 +89,8 @@ jobs:
         name: Create PR
         with:
          token:  ${{ secrets.TOKEN }}
-         commit-message: Commit message SZ 2
-         title: Your desired title 2 
-         body: Auto-created Pull Request 2
+         commit-message: Commit message SZ 3
+         title: Your desired title 3
+         body: Auto-created Pull Request 3
          branch: code-change # The branch where you commit
          base: main # Don't forget to specify the right base branch here
