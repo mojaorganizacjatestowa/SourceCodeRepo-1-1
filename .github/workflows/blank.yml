@@ -83,14 +83,14 @@ jobs:
           export COMMIT_MESSAGE="DT:${{ github.sha }}:DT"
           echo $COMMIT_MESSAGE
           git add .
-          git commit -m "Standard message $COMMIT_MESSAGE"
+          git commit -m "Standard message "
          
         
       - uses: peter-evans/create-pull-request@v6
         name: Create PR
         with:
          token:  ${{ secrets.TOKEN }}
-         commit-message: Auto Pull Request from ${{ github.sha }}
+         commit-message: Commit message SZ
          title: Your desired title
          body: Auto-created Pull Request
          branch: code-change # The branch where you commit
