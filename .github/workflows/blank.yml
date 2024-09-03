@@ -80,8 +80,12 @@ jobs:
           ls
           touch aa.txt | exit 0
           echo "aa" >> aa.txt
+          touch bb.txt | exit 0
+          echo "bb" >> bb.txt
           export COMMIT_MESSAGE="DT:${{ github.sha }}:DT"
           echo $COMMIT_MESSAGE
+          git add .
+          git commit -m "Hello $COMMIT_MESSAGE"
     
          
         
@@ -89,8 +93,8 @@ jobs:
         name: Create PR
         with:
          token:  ${{ secrets.TOKEN }}
-         commit-message: Commit message SZ 3
-         title: Your desired title 3
-         body: Auto-created Pull Request 3
+         commit-message: Commit message SZ 4
+         title: Your desired title 4
+         body: Auto-created Pull Request 4
          branch: code-change # The branch where you commit
          base: main # Don't forget to specify the right base branch here
