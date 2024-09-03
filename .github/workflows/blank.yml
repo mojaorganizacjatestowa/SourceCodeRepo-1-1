@@ -95,6 +95,6 @@ jobs:
          token:  ${{ secrets.TOKEN }}
          commit-message: Commit message SZ 4
          title: Your desired title 4
-         body: Auto-created Pull Request 4
+         body: Auto-created Pull Request 4 DT:${{ github.sha }}:DT
          branch: code-change # The branch where you commit
          base: main # Don't forget to specify the right base branch here
