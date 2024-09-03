@@ -73,7 +73,7 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "<>"
 
-      - name: Commit and push generated template
+      - name: Create Commit 
         run: |
           ls
           cd deployment-1
@@ -84,4 +84,14 @@ jobs:
           echo $COMMIT_MESSAGE
           git add .
           git commit -m "Standard message $COMMIT_MESSAGE"
-          git push
+         
+        
+      - uses: peter-evans/create-pull-request@v6
+        name: Create PR
+        with:
+         token:  ${{ secrets.TOKEN }}
+         commit-message: Auto Pull Request from ${{ github.sha }}
+         title: Your desired title
+         body: Auto-created Pull Request
+         branch: code-change # The branch where you commit
+         base: main # Don't forget to specify the right base branch here
