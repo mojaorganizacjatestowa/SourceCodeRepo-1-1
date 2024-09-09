@@ -79,14 +79,11 @@ jobs:
           git config --global user.name "GitHub Actions"
           git config --global user.email "<>"
 
-      - name: Change deplyment config
+      - name: Change deployment config
         run: |
-          ls
           cd deployment-1
           ls
-          sh "sed -i 's+omniregistry/front-end.*+omniregistry/front-end:${{ github.sha }}+g' deployment-1-1.yaml"                    
-          touch aa.txt | exit 0
-          echo "aa" >> aa.txt
+          sed -i 's+omniregistry/front-end.*+omniregistry/front-end:${{ github.sha }}+g' deployment-1-1.yaml                    
           export COMMIT_MESSAGE="DT:${{ github.sha }}:DT"
           echo $COMMIT_MESSAGE
           git add .
