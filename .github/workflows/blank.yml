@@ -58,7 +58,7 @@ jobs:
         with:
          context: .
          push: true
-         tags: omniregistry/front-end:{{ github.sha }}
+         tags: omniregistry/front-end:${{ github.sha }}
 
       
 
