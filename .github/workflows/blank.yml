@@ -65,6 +65,7 @@ jobs:
            token: ${{ secrets.TOKEN }}
            status: success
            context: BuildImage
+           sha: ${{ github.sha }}
            description: omniregistry/front-end:${{ github.sha }}
 
       
