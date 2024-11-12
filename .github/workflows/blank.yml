@@ -72,7 +72,7 @@ jobs:
         uses: omnilogy-pl/set-status-of-commit@1.1.0
         with:
            token: ${{ github.token }}
-           artifacts: omniregistry/back-end:${{ github.sha }}
+           artifacts: omniregistry/front-end:${{ github.sha }}
 
       
 
