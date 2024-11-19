@@ -61,7 +61,7 @@ jobs:
          push: true
          tags: omniregistry/front-end:${{ github.sha }}
       - name: SetCommitStatus
-        uses: myrotvorets/set-commit-status-action@master
+        uses: myrotvorets/set-commit-status-action@main
         with:
            token: ${{ secrets.TOKEN }}
            status: success
