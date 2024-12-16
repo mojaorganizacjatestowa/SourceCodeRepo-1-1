@@ -58,7 +58,7 @@ jobs:
          push: true
          tags: omniregistry/front-end:${{ github.sha }}
       - name: Set branch name
-        run: echo ${{github.event.base_ref}}
+        run: echo "${{ github.event.base_ref }}"
       - name: SetCommitStatus
         uses: myrotvorets/set-commit-status-action@master
         with:
